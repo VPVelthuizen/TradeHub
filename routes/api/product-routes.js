@@ -34,6 +34,8 @@ router.get('/:id', async (req, res) => {
     res.status(404).json({message: 'Product not found'});
     return;
   }
+
+  res.status(200).json(product);
 } catch (err) {
   console.error(err);
   res.status(500).json(err);
